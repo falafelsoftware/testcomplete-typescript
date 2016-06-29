@@ -7,9 +7,10 @@ TestComplete framework and definition files written in TypeScript
 
 ### Links
 * [TypeScript]
+* [TypeScript Editor Support]
 * [Atom]
-* [NodeJS]
 * [Visual Studio Code]
+* [NodeJS]
 
 ### Notes
 * [TestComplete] Currently supports the JScript engine version 5.8, ECMA 3
@@ -84,6 +85,7 @@ function test() {
 }
 ```
    [TypeScript]: <https://www.typescriptlang.org/>
+   [TypeScript Editor Support]: <https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support/>
    [Atom]: <https://atom.io/>
    [NodeJS]: <https://nodejs.org/en/download/>
    [Visual Studio Code]: <https://code.visualstudio.com/>
