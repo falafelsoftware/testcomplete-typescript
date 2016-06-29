@@ -4,7 +4,6 @@ TestComplete framework and definition files written in TypeScript
 ### Video Blog Series
 * [Creating a TestComplete JScript Framework with TypeScript]
 * [Using TestComplete Objects in TypeScript Classes]
-* up next... Inheritance
 
 ### Links
 * [TypeScript]
@@ -90,10 +89,6 @@ function test() {
   desktop.screenshot();
 }
 ```
-## Inheritance
-* Using the extends keyword
-* Using the _extends function
-* Inherited constructors and methods
 
    [TypeScript]: <https://www.typescriptlang.org/>
    [Atom]: <https://atom.io/>
