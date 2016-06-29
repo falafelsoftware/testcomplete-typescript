@@ -20,7 +20,6 @@ TestComplete framework and definition files written in TypeScript
 * Format: shift-alt-F
 * JSDOC: /**
 
-## Example code for [Creating a TestComplete JScript Framework with TypeScript]
 ### Sample tsconfig.json file
 
 ```json
@@ -51,11 +50,6 @@ class Desktop {
   }
 }
 ```
-## Using TestComplete Objects in TypeScript Classes
-* Hide unneeded files to reduce noise
-* Organize output files in TestComplete
-* Use TestComplete objects Sys.Desktop and Log in TypeScript
- 
 ### Hide unneeded files to reduce noise: Sample Settings.json
 ```json
 {
@@ -89,7 +83,6 @@ function test() {
   desktop.screenshot();
 }
 ```
-
    [TypeScript]: <https://www.typescriptlang.org/>
    [Atom]: <https://atom.io/>
    [NodeJS]: <https://nodejs.org/en/download/>
