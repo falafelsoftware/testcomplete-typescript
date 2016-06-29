@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child list">
+			<Node name="dbtables">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="DBTables\DBTables.tcDB"/>
+				</Node>
+				<Prp name="key" type="S" value="{5A85EFCF-F4E0-4F67-A06D-64AE5F9F4181}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{C3BE8E0F-FB1F-487B-9AE3-BCFEB91CBEFF}"/>
+				<Prp name="typename" type="S" value="DB tables"/>
+			</Node>
+			<Node name="files">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="Files.tcFiles"/>
+				</Node>
+				<Prp name="key" type="S" value="{0BBB8D7C-0183-4AC0-99E5-66F28534ED98}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{AA2F3067-5C9B-4CCF-89D4-1F93CE1C510F}"/>
+				<Prp name="typename" type="S" value="Files"/>
+			</Node>
+			<Node name="objects">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="Objects.tcObjects"/>
+				</Node>
+				<Prp name="key" type="S" value="{7DCC5320-2056-415A-A6AA-AAA717F3F28B}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{30501691-969F-4007-923F-BA4459E51E6A}"/>
+				<Prp name="typename" type="S" value="Objects"/>
+			</Node>
+			<Node name="regions">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="Regions.tcRegions"/>
+				</Node>
+				<Prp name="key" type="S" value="{040F5E01-425E-4F1F-A9EA-F7CD75E3C13A}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{DA6D7EF7-5B05-4735-AAF0-A85E47D47989}"/>
+				<Prp name="typename" type="S" value="Regions"/>
+			</Node>
+			<Node name="tables">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="Tables\Tables.tcTbls"/>
+				</Node>
+				<Prp name="key" type="S" value="{5C03EE5E-2699-4E19-89AC-9AE851BDE7DB}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{70FC6ED0-A122-4A26-9B64-EDDBB2F11A49}"/>
+				<Prp name="typename" type="S" value="Tables"/>
+			</Node>
+			<Node name="webtesting">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="WebTesting\WebTesting.tcWtc"/>
+				</Node>
+				<Prp name="key" type="S" value="{225B327F-1759-4EEB-8A30-2F02F0736F0C}"/>
+				<Prp name="pluginname" type="S" value="Web Checkpoints"/>
+				<Prp name="type" type="S" value="{B205BEB2-E15D-463E-8F95-9AF50A3E8F46}"/>
+				<Prp name="typename" type="S" value="Web Testing"/>
+			</Node>
+			<Node name="xml">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="XML\XML.tcXmls"/>
+				</Node>
+				<Prp name="key" type="S" value="{3B8F770D-646C-4BC9-8E8C-A2B2F45573C1}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{CCCFA5F5-AB3B-408F-95C9-61DE90C5FAD5}"/>
+				<Prp name="typename" type="S" value="XML"/>
+			</Node>
+		</Node>
+		<Node name="folders"/>
+		<Node name="settings"/>
+		<Prp name="signature" type="S" value="{5238AF17-5FE2-48FF-8BCC-9803A975A4F4}"/>
+		<Prp name="version" type="S" value="11.0"/>
+	</Node>
+</Nodes>

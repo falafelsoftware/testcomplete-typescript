@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "noLib": true,
+    "target": "es3",
+    "rootDir": "ts",
+    "outDir": ".",
+    "diagnostics": true,
+    "noImplicitAny": false,
+    "noEmitHelpers": false,
+    "removeComments": false,
+    "declaration": false
+  },
+  "exclude": [
+    "typings"
+  ]
+}
