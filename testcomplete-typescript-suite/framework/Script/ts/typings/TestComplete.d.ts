@@ -1,6 +1,5 @@
-﻿
-
-declare namespace TestComplete {
+﻿declare namespace TestComplete {
+    
     type Variant = any
 
     /** Generic interfaces */
@@ -669,6 +668,8 @@ declare namespace TestComplete {
         CallStackSettings: any
         CheckpointCount: number
         FolderCheckpointCount: number
+        /** Log MessageText detail, 
+         * and AdditionalInformation to the Additional Information panel  */
         Message(MessageText: any, AdditionalInformation?: any, Priority?: any, Attrib?: any, Picture?: Picture, FolderId?: number): void
         Warning(MessageText: any, AdditionalInformation?: any, Priority?: any, Attrib?: any, Picture?: Picture, FolderId?: number): void
         Error(MessageText: any, AdditionalInformation?: any, Priority?: any, Attrib?: any, Picture?: Picture, FolderId?: number): void
