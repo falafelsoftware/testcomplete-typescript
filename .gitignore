@@ -1,0 +1,6 @@
+testcomplete-typescript-suite/framework/Log/
+*.tcLogs
+*.tcCfgExtender
+*.tcLS
+*.tcTAs
+*.js

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child list"/>
+		<Node name="folders">
+			<Node name="_generated">
+				<Node name="folders"/>
+				<Node name="references">
+					<Prp name="{0bfa18d3-762b-4363-9089-9777bacf9069}" type="S" value=""/>
+					<Prp name="{100df6f9-2506-4780-8036-ce784fc9b262}" type="S" value=""/>
+					<Prp name="{125f6a8b-f6a5-4d98-af89-872e63dcf914}" type="S" value=""/>
+					<Prp name="{1285764d-1147-4230-82ac-10725ed7d536}" type="S" value=""/>
+					<Prp name="{140ccfdb-e0a0-420a-b470-f769f0ced761}" type="S" value=""/>
+					<Prp name="{1d29af69-dc53-4359-93a1-42369852649c}" type="S" value=""/>
+					<Prp name="{1db0dc80-4851-4a8f-81c6-fed8d87d384b}" type="S" value=""/>
+					<Prp name="{22d1fc20-02a7-4981-a936-7b932bd7c78c}" type="S" value=""/>
+					<Prp name="{264e1d45-c613-414e-a338-8660aa05d1a8}" type="S" value=""/>
+					<Prp name="{2d03dfd8-fecc-4127-ab54-59cc91240816}" type="S" value=""/>
+					<Prp name="{33afdf71-e045-4a70-87bd-b6f826daf3f3}" type="S" value=""/>
+					<Prp name="{4557a33a-1619-4dd4-978a-f51d80e06501}" type="S" value=""/>
+					<Prp name="{4ee42657-96e4-4d76-a4e7-09b063b96e05}" type="S" value=""/>
+					<Prp name="{5849d143-56e8-45ef-abe3-55c18770a2be}" type="S" value=""/>
+					<Prp name="{5a6b54c3-0c40-46e4-8abd-a679dfc63288}" type="S" value=""/>
+					<Prp name="{643644d6-0fe4-4f2a-a24f-5c00a4aa7460}" type="S" value=""/>
+					<Prp name="{6cefe53e-67d5-4b9c-9f72-3488e2f02b12}" type="S" value=""/>
+					<Prp name="{6fc44dea-4d44-4398-bd7a-73aaef619500}" type="S" value=""/>
+					<Prp name="{73062146-eb68-43e0-8060-3aa156f01ebc}" type="S" value=""/>
+					<Prp name="{ab4cdf7a-6435-41ba-b099-5039b59aa64b}" type="S" value=""/>
+					<Prp name="{b85276a5-321d-45c5-8e7b-84c69ae0a5c2}" type="S" value=""/>
+					<Prp name="{bbbb5e51-f444-462e-8e45-b271e29afd96}" type="S" value=""/>
+					<Prp name="{e91ef18d-f1a7-43e8-ad73-42085128591e}" type="S" value=""/>
+					<Prp name="{ef1b63b1-2c41-4e05-930c-2d646ea76df7}" type="S" value=""/>
+					<Prp name="{f71c9d9c-79c0-4c77-a802-76fdbfda1c6f}" type="S" value=""/>
+				</Node>
+				<Prp name="caption" type="S" value="_generated"/>
+				<Prp name="description" type="S" value="A logical folder that is used to organize project items and elements."/>
+				<Prp name="moniker" type="S" value=""/>
+			</Node>
+			<Node name="tests">
+				<Node name="folders"/>
+				<Node name="references">
+					<Prp name="{836b899b-a1bd-4a88-94b2-a5c3182cb08b}" type="S" value=""/>
+				</Node>
+				<Prp name="caption" type="S" value="tests"/>
+				<Prp name="description" type="S" value="A logical folder that is used to organize project items and elements."/>
+				<Prp name="moniker" type="S" value=""/>
+			</Node>
+		</Node>
+		<Node name="settings"/>
+		<Prp name="signature" type="S" value="{9252F941-DB23-4FCA-AA50-858B33BB4A19}"/>
+		<Prp name="version" type="S" value="11.0"/>
+	</Node>
+</Nodes>
