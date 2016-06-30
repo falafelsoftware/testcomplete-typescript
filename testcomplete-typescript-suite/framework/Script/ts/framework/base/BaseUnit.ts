@@ -4,7 +4,7 @@ class Base {
   }
 
   public error(message: string, additional?: string) {
-    Log.Error("Error in class " + this.formatMessage, additional);
+    Log.Error("Error in class " + this.formatMessage(message), additional);
   }
 
   public log(message: string, additional?: string) {

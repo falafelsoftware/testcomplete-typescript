@@ -1,4 +1,3 @@
-//USEUNIT RuntimeObjectUnit
 //USEUNIT BaseUnit
 //USEUNIT DateRangeUnit
 //USEUNIT DesktopUnit
@@ -19,7 +18,7 @@ class ProjectTestItemError extends Base {
   public Additional: string;
 }
 
-class ProjectTestItem extends RuntimeObject {
+class ProjectTestItem extends TestCompleteObject {
   public TCO: TestComplete.ProjectTestItem
   public Name: string
   public Parent: ProjectTestItem

@@ -1,7 +1,7 @@
 //USEUNIT BaseUnit
 //USEUNIT TextFileUnit
 
-class TestCompleteMember {
+class TcMember {
     public Index: number
     public Name: string
     public VarType: number
@@ -46,7 +46,7 @@ class TestCompleteMember {
     }
 }
 
-class TestCompleteMethod extends TestCompleteMember {
+class TestCompleteMethod extends TcMember {
     public Parameters = {}
     constructor(name: string, index: number, varType: number) {
         super(name, index, varType)
@@ -54,7 +54,7 @@ class TestCompleteMethod extends TestCompleteMember {
     }
 }
 
-class TestCompleteObject extends TestCompleteMember {
+class TcObject extends TcMember {
     public Object: any
     public Properties = {}
     public Methods = {}
@@ -85,7 +85,7 @@ class TestCompleteObject extends TestCompleteMember {
 
     private addProperty(obj, index) {
         this.Properties[obj.Name] =
-            new TestCompleteMember(obj.Name, index, obj.ValueType)
+            new TcMember(obj.Name, index, obj.ValueType)
     }
 
     private addMethod(obj, index) {
@@ -93,7 +93,7 @@ class TestCompleteObject extends TestCompleteMember {
             new TestCompleteMethod(obj.Name, index, obj.VarType)
         for (var i = 0; i < obj.ParamCount; i++) {
             let name = obj.ParamName(i) || "Param" + (i + 1).toString()
-            method.Parameters[name] = new TestCompleteMember(name, i, obj.ParamType(i))
+            method.Parameters[name] = new TcMember(name, i, obj.ParamType(i))
         }
         this.Methods[obj.Name] = method
     }
@@ -107,13 +107,13 @@ class TestCompleteObject extends TestCompleteMember {
     }
 }
 
-class TestCompleteGenerator extends Base {
-    public Object: TestCompleteObject
+class TcGenerator extends Base {
+    public Object: TcObject
     public Definition: string
     public Declaration: string
     constructor(obj: any, name: string) {
         super()
-        this.Object = new TestCompleteObject(obj, name, 0, 0)
+        this.Object = new TcObject(obj, name, 0, 0)
         this.Definition = this.intf()
         this.Declaration = this.declaration()
     }
@@ -121,7 +121,7 @@ class TestCompleteGenerator extends Base {
     private intf(): string {
         let result = "interface " + this.Object.Name + " {"
         for (var i in this.Object.Properties) {
-            let prop = <TestCompleteMember>this.Object.Properties[i]
+            let prop = <TcMember>this.Object.Properties[i]
             if (!prop.IsPrivate) {
                 result += "\n    " + prop.Name + ": " + prop.TypeScriptType
             }
@@ -151,13 +151,13 @@ class TestCompleteGenerator extends Base {
     }
 }
 
-class Framework extends TestCompleteGenerator {
+class Framework extends TcGenerator {
     private path: string
     constructor(obj: any, name: string) {
-        const typings = "\\script\\ts\\typings\\"
+        const typings = "framework\\script\\ts\\typings\\"
         const extension = ".d.ts"
         super(obj, name)
-        this.path = Project.Path + typings + name + extension
+        this.path = ProjectSuite.Path + typings + name + extension
     }
 
     public generate() {

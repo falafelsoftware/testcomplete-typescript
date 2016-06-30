@@ -36,8 +36,8 @@
 		<Node name="folders"/>
 		<Node name="scc">
 			<Node name="data"/>
-			<Prp name="key" type="S" value="{00000000-0000-0000-0000-000000000000}"/>
-			<Prp name="name" type="S" value=""/>
+			<Prp name="key" type="S" value="{C900492B-D218-429C-9AA0-264B7D78CA88}"/>
+			<Prp name="name" type="S" value="Git Plugin"/>
 		</Node>
 		<Node name="settings">
 			<Node name="{5a85e200-b5d2-4f74-972a-0221f2956a19}">

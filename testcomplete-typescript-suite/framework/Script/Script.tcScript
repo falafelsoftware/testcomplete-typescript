@@ -19,36 +19,271 @@
 ]>
 <Nodes version="1">
 	<Node name="root">
-		<Node name="child list"/>
+		<Node name="child list">
+			<Node name="aliasunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\base\AliasUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{6A5A32FE-3C6A-4F67-ADDE-795B8FBDE102}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="baseunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\base\BaseUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{FD4A5404-AF52-491C-A68E-03CAC07E7B56}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="browsercacheunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\BrowserCacheUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{AC513B7D-C854-402C-98FC-D931A611B97F}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="browserdialogunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\BrowserDialogUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{915E2698-32A5-4962-A420-ABC13EA5BE87}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="browserunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\BrowserUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{AB198282-8587-4818-A26E-2E146951DA6C}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="chromebrowsercacheunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\ChromeBrowserCacheUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{6C47C5DB-FF84-4745-9967-2211943BC6C0}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="dateformatspecifiersunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\DateFormatSpecifiersUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{34563BB2-5DAA-4BA4-99F4-01B7EBD9A2D7}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="daterangeunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\DateRangeUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{B8D1881D-A14E-465E-96DF-A28934493C28}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="datetimeunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\DateTimeUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{5AE0E787-302B-4A48-90B0-34538B690957}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="defaultsettingsunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\DefaultSettingsUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{8088C88C-A22D-4BDF-ACAB-368F95073B4C}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="definitionstestunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="tests\DefinitionsTestUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{51C9FE7E-CAE6-4D90-BD50-3EAC09BE25A9}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="desktopunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\DesktopUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{900CFAF7-988C-4E33-AE49-ECAF208F8401}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="displayunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\DisplayUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{42DF6B6A-3A40-462B-91B2-BEC33AD0EC85}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="elementunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\base\ElementUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{0D0D87FA-300D-4F78-88C4-9E744E93E957}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="emailconfigurationunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\EmailConfigurationUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{DE3AE87B-1816-4D94-8292-106038E1E10D}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="emailunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\EmailUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{C9DD539B-C1C2-4195-AF43-C955BE454B78}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="imageelementunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\ImageElementUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{317BC8FC-B59D-482C-86C8-EE100B9653A5}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="oleobjectbaseunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\OleObjectBaseUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{560C461A-71B5-4141-9DAB-5ED71B983946}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="projecttestitemunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\ProjectTestItemUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{6C6DFFF1-3D1C-4C89-BD6E-20E02A208104}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="runtimeobjectunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\base\RuntimeObjectUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{62DFA398-90F3-4F5A-85EF-D5BC58701F66}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="textfileunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\TextFileUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{D7BF0EFC-EF6C-4EED-83E5-890039C28109}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="timeoutunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\TimeoutUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{357014E3-5139-45C1-914B-D6D214BFE78D}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="typescriptutilsunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\TypeScriptUtilsUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{887B56B9-D835-42D2-B589-73C7E0D83E67}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="visibleobjectunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\base\VisibleObjectUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{451AEB14-3B84-494D-ADBF-F17D6B63A992}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="webelementunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\base\WebElementUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{7F57F458-7F57-465B-8F53-E193EF7D19BF}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+			<Node name="windowunit">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="testcomplete\WindowUnit.js"/>
+				</Node>
+				<Prp name="key" type="S" value="{E84F0ACA-BA71-426A-993D-46E87B41D9F5}"/>
+				<Prp name="pluginname" type="S" value="Script"/>
+				<Prp name="type" type="S" value="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}"/>
+				<Prp name="typename" type="S" value="Script Unit"/>
+			</Node>
+		</Node>
 		<Node name="folders">
 			<Node name="_generated">
 				<Node name="folders"/>
 				<Node name="references">
-					<Prp name="{0bfa18d3-762b-4363-9089-9777bacf9069}" type="S" value=""/>
-					<Prp name="{100df6f9-2506-4780-8036-ce784fc9b262}" type="S" value=""/>
-					<Prp name="{125f6a8b-f6a5-4d98-af89-872e63dcf914}" type="S" value=""/>
-					<Prp name="{1285764d-1147-4230-82ac-10725ed7d536}" type="S" value=""/>
-					<Prp name="{140ccfdb-e0a0-420a-b470-f769f0ced761}" type="S" value=""/>
-					<Prp name="{1d29af69-dc53-4359-93a1-42369852649c}" type="S" value=""/>
-					<Prp name="{1db0dc80-4851-4a8f-81c6-fed8d87d384b}" type="S" value=""/>
-					<Prp name="{22d1fc20-02a7-4981-a936-7b932bd7c78c}" type="S" value=""/>
-					<Prp name="{264e1d45-c613-414e-a338-8660aa05d1a8}" type="S" value=""/>
-					<Prp name="{2d03dfd8-fecc-4127-ab54-59cc91240816}" type="S" value=""/>
-					<Prp name="{33afdf71-e045-4a70-87bd-b6f826daf3f3}" type="S" value=""/>
-					<Prp name="{4557a33a-1619-4dd4-978a-f51d80e06501}" type="S" value=""/>
-					<Prp name="{4ee42657-96e4-4d76-a4e7-09b063b96e05}" type="S" value=""/>
-					<Prp name="{5849d143-56e8-45ef-abe3-55c18770a2be}" type="S" value=""/>
-					<Prp name="{5a6b54c3-0c40-46e4-8abd-a679dfc63288}" type="S" value=""/>
-					<Prp name="{643644d6-0fe4-4f2a-a24f-5c00a4aa7460}" type="S" value=""/>
-					<Prp name="{6cefe53e-67d5-4b9c-9f72-3488e2f02b12}" type="S" value=""/>
-					<Prp name="{6fc44dea-4d44-4398-bd7a-73aaef619500}" type="S" value=""/>
-					<Prp name="{73062146-eb68-43e0-8060-3aa156f01ebc}" type="S" value=""/>
-					<Prp name="{ab4cdf7a-6435-41ba-b099-5039b59aa64b}" type="S" value=""/>
-					<Prp name="{b85276a5-321d-45c5-8e7b-84c69ae0a5c2}" type="S" value=""/>
-					<Prp name="{bbbb5e51-f444-462e-8e45-b271e29afd96}" type="S" value=""/>
-					<Prp name="{e91ef18d-f1a7-43e8-ad73-42085128591e}" type="S" value=""/>
-					<Prp name="{ef1b63b1-2c41-4e05-930c-2d646ea76df7}" type="S" value=""/>
-					<Prp name="{f71c9d9c-79c0-4c77-a802-76fdbfda1c6f}" type="S" value=""/>
+					<Prp name="{0d0d87fa-300d-4f78-88c4-9e744e93e957}" type="S" value=""/>
+					<Prp name="{317bc8fc-b59d-482c-86c8-ee100b9653a5}" type="S" value=""/>
+					<Prp name="{34563bb2-5daa-4ba4-99f4-01b7ebd9a2d7}" type="S" value=""/>
+					<Prp name="{357014e3-5139-45c1-914b-d6d214bfe78d}" type="S" value=""/>
+					<Prp name="{42df6b6a-3a40-462b-91b2-bec33ad0ec85}" type="S" value=""/>
+					<Prp name="{451aeb14-3b84-494d-adbf-f17d6b63a992}" type="S" value=""/>
+					<Prp name="{560c461a-71b5-4141-9dab-5ed71b983946}" type="S" value=""/>
+					<Prp name="{5ae0e787-302b-4a48-90b0-34538b690957}" type="S" value=""/>
+					<Prp name="{62dfa398-90f3-4f5a-85ef-d5bc58701f66}" type="S" value=""/>
+					<Prp name="{6a5a32fe-3c6a-4f67-adde-795b8fbde102}" type="S" value=""/>
+					<Prp name="{6c47c5db-ff84-4745-9967-2211943bc6c0}" type="S" value=""/>
+					<Prp name="{6c6dfff1-3d1c-4c89-bd6e-20e02a208104}" type="S" value=""/>
+					<Prp name="{7f57f458-7f57-465b-8f53-e193ef7d19bf}" type="S" value=""/>
+					<Prp name="{8088c88c-a22d-4bdf-acab-368f95073b4c}" type="S" value=""/>
+					<Prp name="{887b56b9-d835-42d2-b589-73c7e0d83e67}" type="S" value=""/>
+					<Prp name="{900cfaf7-988c-4e33-ae49-ecaf208f8401}" type="S" value=""/>
+					<Prp name="{915e2698-32a5-4962-a420-abc13ea5be87}" type="S" value=""/>
+					<Prp name="{ab198282-8587-4818-a26e-2e146951da6c}" type="S" value=""/>
+					<Prp name="{ac513b7d-c854-402c-98fc-d931a611b97f}" type="S" value=""/>
+					<Prp name="{b8d1881d-a14e-465e-96df-a28934493c28}" type="S" value=""/>
+					<Prp name="{c9dd539b-c1c2-4195-af43-c955be454b78}" type="S" value=""/>
+					<Prp name="{d7bf0efc-ef6c-4eed-83e5-890039c28109}" type="S" value=""/>
+					<Prp name="{de3ae87b-1816-4d94-8292-106038e1e10d}" type="S" value=""/>
+					<Prp name="{e84f0aca-ba71-426a-993d-46e87b41d9f5}" type="S" value=""/>
+					<Prp name="{fd4a5404-af52-491c-a68e-03cac07e7b56}" type="S" value=""/>
 				</Node>
 				<Prp name="caption" type="S" value="_generated"/>
 				<Prp name="description" type="S" value="A logical folder that is used to organize project items and elements."/>
@@ -57,7 +292,7 @@
 			<Node name="tests">
 				<Node name="folders"/>
 				<Node name="references">
-					<Prp name="{836b899b-a1bd-4a88-94b2-a5c3182cb08b}" type="S" value=""/>
+					<Prp name="{51c9fe7e-cae6-4d90-bd50-3eac09be25a9}" type="S" value=""/>
 				</Node>
 				<Prp name="caption" type="S" value="tests"/>
 				<Prp name="description" type="S" value="A logical folder that is used to organize project items and elements."/>

@@ -1,7 +1,7 @@
-//USEUNIT RuntimeObjectUnit
+//USEUNIT TestCompleteObjectUnit
 //USEUNIT TimeoutUnit
 
-class VisibleObject extends RuntimeObject {
+class VisibleObject extends TestCompleteObject {
   public TCO: TestComplete.VisibleObject
 
   constructor(tco: TestComplete.VisibleObject) {
@@ -25,6 +25,7 @@ class VisibleObject extends RuntimeObject {
   }
 
   public refresh(): this {
+    Aliases.RefreshMappingInfo()
     return this
   }
 

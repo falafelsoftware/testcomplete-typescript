@@ -50,15 +50,6 @@
 				<Prp name="type" type="S" value="{5238AF17-5FE2-48FF-8BCC-9803A975A4F4}"/>
 				<Prp name="typename" type="S" value="Stores"/>
 			</Node>
-			<Node name="testedapps">
-				<Node name="item data">
-					<Prp name="storage" type="S" value="TestedApps\TestedApps.tcTAs"/>
-				</Node>
-				<Prp name="key" type="S" value="{8451B16B-3F0E-4D52-8BBB-B0BD48E59F6E}"/>
-				<Prp name="pluginname" type="S" value=""/>
-				<Prp name="type" type="S" value="{90D101C8-80C7-48D4-9055-2E451B9BCD75}"/>
-				<Prp name="typename" type="S" value="Tested Applications"/>
-			</Node>
 		</Node>
 		<Node name="config">
 			<Prp name="language" type="S" value="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}"/>

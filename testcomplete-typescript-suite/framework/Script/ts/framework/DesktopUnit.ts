@@ -1,6 +1,6 @@
-//USEUNIT RuntimeObjectUnit
+//USEUNIT TestCompleteObjectUnit
 
-class Desktop extends RuntimeObject {
+class Desktop extends TestCompleteObject {
     public TCO: TestComplete.Desktop;
 
     constructor() {

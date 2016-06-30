@@ -3,6 +3,10 @@
 class Window extends VisibleObject {
     public TCO: TestComplete.Window
 
+    constructor(tco: TestComplete.Window){
+        super(tco)
+    }
+
     public activate(): this {
         this.TCO.Activate()
         return this

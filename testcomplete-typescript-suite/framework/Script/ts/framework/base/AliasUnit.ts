@@ -1,4 +1,3 @@
-//USEUNIT BaseUnit
 //USEUNIT ElementUnit
 //USEUNIT WebElementUnit
 //USEUNIT ImageElementUnit
@@ -14,7 +13,7 @@ class Alias extends Base {
       .bind(childaliasname, this.TCO)
   }
 
-  public as<T extends RuntimeObject>(Class?: any, aliasname?: string, parent?: TestComplete.Alias): T {
+  public as<T extends VisibleObject>(Class?: any, aliasname?: string, parent?: TestComplete.Alias): T {
     this.bind(aliasname, parent)
     Class = Class || WebElement
     return new Class(this.TCO)

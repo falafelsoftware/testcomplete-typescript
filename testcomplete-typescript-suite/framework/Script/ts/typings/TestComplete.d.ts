@@ -1,10 +1,12 @@
 ﻿declare namespace TestComplete {
-    
+
     type Variant = any
+    type TestCompleteObject = any
 
     /** Generic interfaces */
 
-    interface RuntimeObject { }
+    interface RuntimeObject {
+    }
 
     interface VisibleObject extends RuntimeObject {
         Exists: boolean;
@@ -73,7 +75,7 @@
         Refresh(): void
         Restart(): void
         Shutdown(): void
-        WaitBrowser(BrowserName: string, Timeout: number, BrowserIndex: number): any
+        WaitBrowser(BrowserName?: string, Timeout?: number, BrowserIndex?: number): BrowserProcess
         WaitChild(ChildName: string, WaitTime: number): any
         WaitProcess(ProcessName: string, WaitTime: number, GroupIndex: number): any
         WaitProperty(PropertyName: string, PropertyValue: any, WaitTime: number): boolean
@@ -253,6 +255,7 @@
         Child(Index: number): any
         Close(WaitTimeout: number): void
         CLXObject(Name: any): any
+        BrowserWindow(Index: number): Window
         Find(PropNames: any, PropValues: any, Depth: number, RefreshTree: boolean): any
         FindAll(PropNames: any, PropValues: any, Depth: number, RefreshTree: boolean): any
         FindAllChildren(PropNames: any, PropValues: any, Depth: number, RefreshTree: boolean): any
@@ -280,8 +283,8 @@
         WaitCLXObject(Name: any, Timeout: number): any
         WaitJavaFXObject(Name: any, Text: any, Index: any, Timeout: number): any
         WaitJavaRuntime(Index: any, Timeout: number): any
-        WaitPage(URL: string, Index: number, Timeout: number): any
-        WaitProperty(PropertyName: string, PropertyValue: any, WaitTime: number): boolean
+        WaitPage(URL: string, Index?: number, Timeout?: number): any
+        WaitProperty(PropertyName: string, PropertyValue: any, WaitTime?: number): boolean
         WaitQtObject(Name: any, Text: any, WndIndex: any, Timeout: number): any
         WaitSwingObject(Name: any, AccName: any, Index: any, WndIndex: any, Timeout: number): any
         WaitSWTObject(Name: any, WndCaption: any, Index: any, Timeout: number): any
@@ -289,7 +292,7 @@
         WaitVCLNETObject(Name: any, WndCaption: any, Index: any, Timeout: number): any
         WaitVCLObject(Name: any, Timeout: number): any
         WaitWFCObject(Name: any, WndCaption: any, Index: any, Timeout: number): any
-        WaitWindow(WndClass: string, WndCaption: string, GroupIndex: number, WaitTime: number): any
+        WaitWindow(WndClass: string, WndCaption?: string, GroupIndex?: number, WaitTime?: number): Window
         WaitWinFormsObject(Name: any, WndCaption: any, Index: any, Timeout: number): any
         WaitWPFObject(Name: any, Caption: any, Index: any, Timeout: number): any
         WFCObject(Name: any, WndCaption: any, Index: any): any
@@ -399,13 +402,17 @@
 
     /** Project and Project Suite */
 
+    interface Password {
+        DecryptedValue: string
+    }
+
     interface Project {
         FileName: string
         Path: string
         ConfigPath: string
         TestItems: ProjectTestItems
         Logs: any
-        Variables: Variables
+        Variables: ProjectVariables
     }
 
     interface ProjectSuite {
@@ -413,7 +420,7 @@
         Path: string
         ConfigPath: string
         TestItems: ProjectSuiteTestItems
-        Variables: Variables
+        Variables: ProjectSuiteVariables
     }
 
     interface Variables {
@@ -428,6 +435,9 @@
         GetVariableCategory(Variable: Variant): string
         GetVariableDefaultValue(Variable: Variant): Variant
     }
+
+    interface ProjectVariables extends Variables { }
+    interface ProjectSuiteVariables extends Variables { }
 
     interface TestItemElement {
         Caption: string
