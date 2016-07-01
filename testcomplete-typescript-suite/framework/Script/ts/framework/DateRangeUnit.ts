@@ -1,6 +1,20 @@
 //USEUNIT BaseUnit
 //USEUNIT DateTimeUnit
 
+/** Create a range of dates. 
+ * Usage: 
+    //USEUNIT DateRangeUnit
+
+    function testDateRange() {
+        var dateRange = new DateRange()
+            .from()
+            .addDays(1) // Start date is tomorrow
+            .to()
+            .addDays(7) // End date is seven days from tomorrow
+        Log.Message(dateRange.toString())
+        // example output: 7/2/2016 12:21:44 PM - 7/9/2016
+    }
+ */
 class DateRange extends Base {
     private _context: DateTime;
     public Start: DateTime;
@@ -15,7 +29,7 @@ class DateRange extends Base {
     }
 
     private update(): void {
-        if (this.Start.compare(this.End) == DateTime.Later){
+        if (this.Start.compare(this.End) == DateTimeCompareResult.Later){
             this.End.assign(this.Start)
         }
     }
@@ -47,7 +61,7 @@ class DateRange extends Base {
         return this;
     }
     
-    public toString(format: string): string {
+    public toString(format: string = ""): string {
         return this.Start.toString(format)
             + " - " +
             this.End.toString(format);

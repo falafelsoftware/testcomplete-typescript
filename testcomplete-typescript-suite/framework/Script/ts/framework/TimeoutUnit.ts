@@ -1,6 +1,7 @@
 //USEUNIT BaseUnit
 //USEUNIT DefaultSettingsUnit
 
+/** A timer used in loops as an exit condition. */
 class Timeout extends Base {
     public Name: string
     public MaxTime = DefaultSettings.Wait

@@ -1167,6 +1167,7 @@
 
 }
 
+
 /** declarations
  * These allow you to use TestComplete keywords in TypeScript, e.g.
  * var today = aqDateTime.Today()

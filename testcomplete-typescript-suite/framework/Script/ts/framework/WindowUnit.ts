@@ -1,5 +1,10 @@
 //USEUNIT VisibleObjectUnit
 
+/** wraps a TestComplete window object,
+ * and generic window-specific operations
+ * like activate, minimize, maximize, restore,
+ * position and close.
+ */
 class Window extends VisibleObject {
     public TCO: TestComplete.Window
 

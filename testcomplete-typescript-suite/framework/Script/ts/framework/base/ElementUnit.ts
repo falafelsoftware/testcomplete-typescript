@@ -28,11 +28,13 @@ class Element extends VisibleObject {
     return this;
   }
 
-  /** Assign the text all at once. */
+  /** Assign text to the element */
   public setText(text: string): this {
     this.whenReady();
+    // assign the text all at once if supported
     if (this.supports("SetText")) {
       this.TCO.SetText(text);
+      // send keystrokes if necessary, e.g. TextArea elements  
     } else if (this.supports("Keys")) {
       this.TCO.Keys(text);
     }
@@ -47,9 +49,11 @@ class Element extends VisibleObject {
     return this;
   }
 
-  public check(value: string, prop: string = "contentText", comparator: number = BuiltIn.cmpContains): this{
+  /** A simple verification that value is contained 
+   * in the contentText property */
+  public check(value: string, prop: string = "contentText", comparator: number = BuiltIn.cmpContains): this {
     aqObject.CheckProperty(this.TCO, prop, comparator, value);
-    return this; 
+    return this;
   }
 
 }

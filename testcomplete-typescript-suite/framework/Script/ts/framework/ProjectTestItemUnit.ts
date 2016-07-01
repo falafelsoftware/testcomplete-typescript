@@ -2,12 +2,19 @@
 //USEUNIT DateRangeUnit
 //USEUNIT DesktopUnit
 
+/** Objects used to track test execution. 
+ * Can be added to OnStartTest, OnStopTest and OnError 
+ * event handlers */
+
+/** project run states */
 enum ProjectTestItemRunstate {
   NotRun,
   Running,
   Complete
 }
 
+/** Stores the message and additional info 
+ * from a logged error. */
 class ProjectTestItemError extends Base {
   constructor(message: string, additional?: string) {
     super();
@@ -18,6 +25,8 @@ class ProjectTestItemError extends Base {
   public Additional: string;
 }
 
+/** Wraps a Project test item, i.e. 
+ * Project.TestItems.Current. */
 class ProjectTestItem extends TestCompleteObject {
   public TCO: TestComplete.ProjectTestItem
   public Name: string
@@ -73,6 +82,15 @@ class ProjectTestItem extends TestCompleteObject {
   }
 }
 
+/** Creates a flat list of Project test items
+ * that know their previous and next items,
+ * their parent item, their level in the 
+ * hierarchy (e.g. level == 0 is a root level 
+ * project test item), and the first and
+ * last items in the list.
+ * 
+ * Used to summarize test results. 
+ */
 class ProjectTestItems extends Base {
 
   // flat list
@@ -146,42 +164,5 @@ class ProjectTestItems extends Base {
         this.add(tco.TestItem(i), item)
       }
     }
-  }
-
-  public summary(): string {
-    let result: string = ""
-    let br: string = "<br \\>"
-    let tagFail: string = "<span style=Fontcolor:red>"
-    let tagEnd: string = "</span>"
-    let errorCount: number = 0;
-
-    result = "Logged in as " + Sys.UserName +
-      " on " + Sys.HostName
-    var desktop = new Desktop()
-    result += br + "Desktop width " + desktop.width() +
-      " height " + desktop.height() + br
-    for (let item of this.Items) {
-      if (item.Name) {
-        result += item.Time.Start.toString() + " - " +
-          item.Time.End.toString() + " "
-        result += item.Name
-        if (item.Errors.length > 0) {
-          errorCount++;
-          result += tagFail + "<h5>Errors</h5>"
-          for (let error of item.Errors) {
-            result += error.Message
-            if (error.Additional) {
-              result += "[" + error.Additional + "]"
-            }
-            result += br
-          }
-          result += tagEnd
-        }
-        result += br
-      }
-    }
-    result += + this.Items.length + " test items with " +
-      errorCount + " errors"
-    return result
   }
 }

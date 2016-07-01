@@ -1,17 +1,35 @@
 //USEUNIT BaseUnit
 
+/** Wraps aqDateTime and aqConvert for common 
+ * date functions. 
+ * Usage:
+    //USEUNIT DateTimeUnit
+    function test() {
+        var today = new DateTime().today();
+        var tomorrow = new DateTime().today().addDays(1);
+        if (tomorrow.compare(today) == DateTime.Later) {
+            Log.Message("Tomorrow is later than today");
+        }
+    }
+*/
+
+enum DateTimeCompareResult {
+    Earlier = -1,
+    Equal = 0,
+    Later = 1
+}
+
 class DateTime extends Base {
     public TCO: TestComplete.DateTime
-    public static Earlier = -1
-    public static Equal = 0
-    public static Later = 1
+    // Get an optional DateTime value, e.g. aqDateTime.Today()
+    // Defaults to "Now""
     constructor(tco?: TestComplete.DateTime) {
         super()
         this.TCO = tco || aqDateTime.Now()
     }
 
-    public compare(date: DateTime): number {
-        return aqDateTime.Compare(this.TCO, date.TCO)
+    public compare(date: DateTime): DateTimeCompareResult {
+        return <DateTimeCompareResult>aqDateTime.Compare(this.TCO, date.TCO)
     }
 
     public asDate(): this {

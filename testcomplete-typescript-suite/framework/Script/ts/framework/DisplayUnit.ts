@@ -1,7 +1,6 @@
 //USEUNIT BaseUnit
 
 /** Change screen dimensions and colors */
-
 class Display extends Base {
 
     public getLastError(): any {

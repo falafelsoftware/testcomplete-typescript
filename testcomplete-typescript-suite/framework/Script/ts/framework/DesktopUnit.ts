@@ -1,5 +1,12 @@
 //USEUNIT TestCompleteObjectUnit
 
+/** Wraps the Sys.Desktop object. 
+ * Allows you to log the desktop dimensions,
+ * and take a screenshot of the desktop.
+ * 
+ * Note: does not descend from Visibleobject
+ * because the Desktop has no Exists property 
+ */
 class Desktop extends TestCompleteObject {
     public TCO: TestComplete.Desktop;
 

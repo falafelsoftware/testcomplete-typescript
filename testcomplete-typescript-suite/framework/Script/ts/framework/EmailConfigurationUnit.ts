@@ -1,5 +1,8 @@
 //USEUNIT OleObjectBaseUnit
 
+/** Wraps the CDO.Configuration object. 
+ * See https://support.smartbear.com/viewarticle/67749/
+ */
 class EmailConfiguration extends OleObjectBase {
 
     constructor(server: string, port: number, user: string, password: string) {

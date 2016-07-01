@@ -2,6 +2,20 @@
 /**
  * Date and time format specifiers used by aqConvert.DateTimeToFormatStr
  * https://support.smartbear.com/viewarticle/73413/
+ * 
+ * Usage: 
+    //USEUNIT DateTimeUnit
+    //USEUNIT DateFormatSpecifiersUnit
+    function testDateFormatSpecifiers() {
+        var timeStamp = DateFormatSpecifiers.MonthPadded +
+            DateFormatSpecifiers.DayOfMonthPadded +
+            DateFormatSpecifiers.LongYearPadded +
+            DateFormatSpecifiers.Hour24Padded +
+            DateFormatSpecifiers.MinutePadded +
+            DateFormatSpecifiers.SecondPadded
+        var today = new DateTime()
+        Log.Message(today.toString(timeStamp))
+    }
  */
 class DateFormatSpecifiers {
     public static AbbreviatedWeekdayName: string = "%a"

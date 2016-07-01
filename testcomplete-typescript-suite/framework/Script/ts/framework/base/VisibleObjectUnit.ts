@@ -1,9 +1,15 @@
 //USEUNIT TestCompleteObjectUnit
 //USEUNIT TimeoutUnit
 
+/** Represents a TestComplete on-screen object 
+ * with visible properties. */
 class VisibleObject extends TestCompleteObject {
   public TCO: TestComplete.VisibleObject
 
+  /** Verifies that the underlying TestComplete object has the 
+   * properties and methods required for checking existence, visibility, 
+   * picture and screen capture, 
+   */
   constructor(tco: TestComplete.VisibleObject) {
     super(tco)
     this.requires("Exists")
@@ -37,6 +43,10 @@ class VisibleObject extends TestCompleteObject {
     return this.visible()
   }
 
+  /** Wait for the object to exist and be visible.
+   * The loop exits when the object is either ready, 
+   * or the timeout expires. 
+   */
   protected whenReady(): this {
     let timeout = new Timeout(this.className()).start()
     this.refresh()
@@ -67,6 +77,7 @@ class VisibleObject extends TestCompleteObject {
     return this.TCO.Height
   }
 
+  /** Logs a screenshot of the visible object */
   public screenshot(message?: string, additional?: string): this {
     this.whenReady()
     message = message || "Screenshot of " + this.className()

@@ -1,15 +1,51 @@
 //USEUNIT BaseUnit
 //USEUNIT TextFileUnit
 
+/** Classes to output interface definitions and
+ * declarations used in .d.ts files
+ * Usage: 
+    * function generateInterface() {
+        new Framework(Log.CreateNewAttributes(), "LogAttributes")
+            .generate()
+    }
+  * 
+  */
+
+enum VarTypes {
+    varBoolean = aqObject.varBoolean,
+    varEmpty = aqObject.varEmpty,
+    varNull = aqObject.varNull,
+    varSmallInt = aqObject.varSmallInt,
+    varInteger = aqObject.varInteger,
+    varSingle = aqObject.varSingle,
+    varDouble = aqObject.varDouble,
+    varCurrency = aqObject.varCurrency,
+    varDate = aqObject.varDate,
+    varOleStr = aqObject.varOleStr,
+    varDispatch = aqObject.varDispatch,
+    varError = aqObject.varError,
+    varVariant = aqObject.varVariant,
+    varUnknown = aqObject.varUnknown,
+    varShortInt = aqObject.varShortInt,
+    varByte = aqObject.varByte,
+    varWord = aqObject.varWord,
+    varLongWord = aqObject.varLongWord,
+    varInt64 = aqObject.varInt64,
+    varArray = aqObject.varArray,
+    varByRef = aqObject.varByRef
+}
+
+/** Base type for objects, properties and methods 
+ * returned by aqObject methods */
 class TcMember {
     public Index: number
     public Name: string
-    public VarType: number
+    public VarType: VarTypes
     public TypeScriptType: string
     public IsPrivate: boolean
     public Value: any
 
-    constructor(name: string, index: number, varType: number) {
+    constructor(name: string, index: number, varType: VarTypes) {
         this.Name = name
         this.Index = index
         this.VarType = varType
@@ -17,28 +53,28 @@ class TcMember {
         this.TypeScriptType = this.typeScriptType(this.VarType)
     }
 
-    private typeScriptType(varType: number): string {
+    private typeScriptType(varType: VarTypes): string {
         const int1 = 22;
         const varVoid = 24;
         switch (varType) {
-            case aqObject.varBoolean: return "boolean"
-            case aqObject.varOleStr: return "string"
-            case aqObject.varArray: return "[]"
-            case aqObject.varInteger:
-            case aqObject.varSmallInt:
-            case aqObject.varSingle:
-            case aqObject.varDouble:
-            case aqObject.varCurrency:
-            case aqObject.varWord:
-            case aqObject.varShortInt:
-            case aqObject.varByte:
-            case aqObject.varWord:
-            case aqObject.varLongWord:
-            case aqObject.varInt64:
-            case aqObject.varByte:
+            case VarTypes.varBoolean: return "boolean"
+            case VarTypes.varOleStr: return "string"
+            case VarTypes.varArray: return "[]"
+            case VarTypes.varInteger:
+            case VarTypes.varSmallInt:
+            case VarTypes.varSingle:
+            case VarTypes.varDouble:
+            case VarTypes.varCurrency:
+            case VarTypes.varWord:
+            case VarTypes.varShortInt:
+            case VarTypes.varByte:
+            case VarTypes.varWord:
+            case VarTypes.varLongWord:
+            case VarTypes.varInt64:
+            case VarTypes.varByte:
             case int1:
                 return "number";
-            case aqObject.varEmpty:
+            case VarTypes.varEmpty:
             case varVoid:
                 return "void";
             default: return "any";
@@ -48,9 +84,8 @@ class TcMember {
 
 class TestCompleteMethod extends TcMember {
     public Parameters = {}
-    constructor(name: string, index: number, varType: number) {
+    constructor(name: string, index: number, varType: VarTypes) {
         super(name, index, varType)
-
     }
 }
 

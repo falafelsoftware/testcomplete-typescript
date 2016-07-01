@@ -1,3 +1,4 @@
+/** Required default settings */
 class DefaultSettings {
     public static Wait = 30000
     public static ProcessWait = 60000

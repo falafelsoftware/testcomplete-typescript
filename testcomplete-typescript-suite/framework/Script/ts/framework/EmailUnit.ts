@@ -1,6 +1,9 @@
 //USEUNIT OleObjectBaseUnit
 //USEUNIT EmailConfigurationUnit 
 
+/** Wraps the CDO.Message object. 
+ * See https://support.smartbear.com/viewarticle/67749/
+*/
 class Email extends OleObjectBase {
 
     constructor(configuration: EmailConfiguration,
