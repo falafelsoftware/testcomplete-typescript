@@ -1,13 +1,17 @@
 ﻿declare namespace TestComplete {
 
     type Variant = any
-    type TestCompleteObject = any
 
-    /** Generic interfaces */
+    /** Generic abstractions */
 
+    /** Used to represent a TestComplete runtime object  
+     * like Sys, Sys.Desktop, Page, page element, anything you might
+     * see in the object browser
+     */
     interface RuntimeObject {
     }
 
+    /** a TestComplete on-screen object with visual properties */
     interface VisibleObject extends RuntimeObject {
         Exists: boolean;
         Visible: boolean;
@@ -20,6 +24,7 @@
         Refresh(): void;
     }
 
+    /** an on-screen object with typical actions */
     interface Element extends VisibleObject {
         Enabled: boolean;
         Keys(text: string): void;
@@ -28,6 +33,7 @@
         ClickButton(): void;
     }
 
+    /** web specific interface with dimensions and scrolling */
     interface WebElement extends Element {
         clientWidth: number;
         clientHeight: number;
@@ -37,7 +43,9 @@
         scrollIntoViewIfNeeded(align: boolean): void;
     }
 
-    /** system objects */
+    /** TestComplete objects initially generated using the TypeScriptUtils class
+     * and hand edited as child property objects are defined.
+     */
 
     interface Sys extends RuntimeObject {
         ChildCount: number
@@ -436,6 +444,17 @@
         GetVariableDefaultValue(Variable: Variant): Variant
     }
 
+/** ProjectSuitVariables and ProjectVariables can be overridden to add your 
+ * project's variables. For example, you can create myapp.d.ts:
+ * declare namespace TestComplete {
+ * 
+ *    interface ProjectSuiteVariables {
+        ElementWait: number
+        PageWait: number
+        ElementDepth: number
+    }
+ *
+ */
     interface ProjectVariables extends Variables { }
     interface ProjectSuiteVariables extends Variables { }
 
@@ -580,7 +599,7 @@
         Contains(Name: string): boolean
     }
 
-    /** Utility objects */
+    /** TestComplete Utility objects */
 
     interface Picture {
         Handle: number
@@ -1148,7 +1167,10 @@
 
 }
 
-/** declarations */
+/** declarations
+ * These allow you to use TestComplete keywords in TypeScript, e.g.
+ * var today = aqDateTime.Today()
+ */
 
 declare var Aliases: TestComplete.Aliases
 declare var aqConvert: TestComplete.aqConvert
